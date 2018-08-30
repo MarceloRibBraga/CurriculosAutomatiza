@@ -26,7 +26,7 @@ namespace CurriculoAutomatiza.UI
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddDbContext<AppContext>(options =>
+            services.AddDbContext<AutomatizaCurriculoDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
 
