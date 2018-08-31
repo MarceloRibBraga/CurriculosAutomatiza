@@ -16,7 +16,8 @@ namespace CurriculoAutomatiza.Domain.Services
         {
             _profissionalRepository = profissionalRepository;
         }
-        public Profissional Adicionar(Profissional entity)
+
+      public Profissional Adicionar(Profissional entity)
         {
             return _profissionalRepository.Adicionar(entity);
         }
