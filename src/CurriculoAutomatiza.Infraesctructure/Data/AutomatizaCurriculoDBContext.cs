@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Transactions;
-using CurriculoAutomatiza.Domain.Entity;
+using CurriculoAutomatiza.Core.Entity;
 using CurriculoAutomatiza.Infraesctructure.EntityConfig;
 using Microsoft.EntityFrameworkCore;
 

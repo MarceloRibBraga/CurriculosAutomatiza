@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CurriculoAutomatiza.Api.Models;
-using CurriculoAutomatiza.Domain.Entity;
-using CurriculoAutomatiza.Domain.Interfaces.Services;
-using CurriculoAutomatiza.Domain.Services;
+using CurriculoAutomatiza.Core.Entity;
+using CurriculoAutomatiza.Core.Interfaces.Repository;
+using CurriculoAutomatiza.Core.Interfaces.Services;
+using CurriculoAutomatiza.Core.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,22 +16,18 @@ namespace CurriculoAutomatiza.Api.Controllers
     [Route("api/Profissional")]
     public class ProfissionalController : Controller
     {
-        private readonly IProfissionalService _profissionalService;
+        private readonly IProfissionalRepository _profissionalService;
 
-        /// <summary>
-        /// o erro está aqui
-        /// </summary>
-        /// <param name="profissionalService"></param>
-        public ProfissionalController(IProfissionalService profissionalService)
+        public ProfissionalController(IProfissionalRepository profissionalService)
         {
             _profissionalService = profissionalService;
         }
+
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<Profissional> Get()
         {
-            
-            return new string[] { "value1", "value2" };
+            return _profissionalService.ObterTodos();
         }
 
         // GET api/values/5
@@ -51,7 +48,7 @@ namespace CurriculoAutomatiza.Api.Controllers
             profisssional.Senha = value.Senha;
             profisssional.Telefone = value.Telefone;
 
-            //_profissionalService.Adicionar(profisssional);
+            _profissionalService.Adicionar(profisssional);
         }
 
         // PUT api/values/5

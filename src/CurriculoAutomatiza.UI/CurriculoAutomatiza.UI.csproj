@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CurriculoAutomatiza.Domain\CurriculoAutomatiza.Domain.csproj" />
+    <ProjectReference Include="..\CurriculoAutomatiza.Domain\CurriculoAutomatiza.Core.csproj" />
     <ProjectReference Include="..\CurriculoAutomatiza.Infraesctructure\CurriculoAutomatiza.Infraesctructure.csproj" />
   </ItemGroup>
 

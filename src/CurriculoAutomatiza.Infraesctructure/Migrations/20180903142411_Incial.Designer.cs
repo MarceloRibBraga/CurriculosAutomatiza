@@ -11,7 +11,7 @@ using System;
 namespace CurriculoAutomatiza.Infraesctructure.Migrations
 {
     [DbContext(typeof(AutomatizaCurriculoDbContext))]
-    [Migration("20180830171658_Incial")]
+    [Migration("20180903142411_Incial")]
     partial class Incial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,7 +21,7 @@ namespace CurriculoAutomatiza.Infraesctructure.Migrations
                 .HasAnnotation("ProductVersion", "2.0.3-rtm-10026")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("CurriculoAutomatiza.Domain.Entity.AreasInteresse", b =>
+            modelBuilder.Entity("CurriculoAutomatiza.Core.Entity.AreasInteresse", b =>
                 {
                     b.Property<int>("AreasInteresseId")
                         .ValueGeneratedOnAdd();
@@ -43,7 +43,7 @@ namespace CurriculoAutomatiza.Infraesctructure.Migrations
                     b.ToTable("AreasInteresse");
                 });
 
-            modelBuilder.Entity("CurriculoAutomatiza.Domain.Entity.Profissional", b =>
+            modelBuilder.Entity("CurriculoAutomatiza.Core.Entity.Profissional", b =>
                 {
                     b.Property<int>("ProfissionalId")
                         .ValueGeneratedOnAdd();
@@ -71,9 +71,9 @@ namespace CurriculoAutomatiza.Infraesctructure.Migrations
                     b.ToTable("Profissional");
                 });
 
-            modelBuilder.Entity("CurriculoAutomatiza.Domain.Entity.AreasInteresse", b =>
+            modelBuilder.Entity("CurriculoAutomatiza.Core.Entity.AreasInteresse", b =>
                 {
-                    b.HasOne("CurriculoAutomatiza.Domain.Entity.Profissional", "Profissional")
+                    b.HasOne("CurriculoAutomatiza.Core.Entity.Profissional", "Profissional")
                         .WithMany("AreasInteresses")
                         .HasForeignKey("ProfissionalId")
                         .OnDelete(DeleteBehavior.Restrict);

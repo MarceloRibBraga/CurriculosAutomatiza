@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using CurriculoAutomatiza.Domain.Entity;
+using CurriculoAutomatiza.Core.Entity;
 
-namespace CurriculoAutomatiza.Domain.Interfaces.Repository
+namespace CurriculoAutomatiza.Core.Interfaces.Repository
 {
     public interface IProfissionalRepository : IRepository<Profissional>
     {

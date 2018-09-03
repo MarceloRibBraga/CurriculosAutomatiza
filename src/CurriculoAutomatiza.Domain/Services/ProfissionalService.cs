@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using CurriculoAutomatiza.Domain.Entity;
-using CurriculoAutomatiza.Domain.Interfaces.Repository;
-using CurriculoAutomatiza.Domain.Interfaces.Services;
+using CurriculoAutomatiza.Core.Entity;
+using CurriculoAutomatiza.Core.Interfaces.Repository;
+using CurriculoAutomatiza.Core.Interfaces.Services;
 
-namespace CurriculoAutomatiza.Domain.Services
+
+namespace CurriculoAutomatiza.Core.Services
 {
    public class ProfissionalService : IProfissionalService
    {

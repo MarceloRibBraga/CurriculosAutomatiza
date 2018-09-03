@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
-using CurriculoAutomatiza.Domain.Entity;
+using CurriculoAutomatiza.Core.Entity;
 
-namespace CurriculoAutomatiza.Domain.Interfaces.Services
+namespace CurriculoAutomatiza.Core.Interfaces.Services
 {
     public interface IAreasInteresseService
     {

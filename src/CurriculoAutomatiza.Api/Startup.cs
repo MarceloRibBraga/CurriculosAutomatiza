@@ -1,10 +1,12 @@
-﻿using CurriculoAutomatiza.Api.Contexto;
-using CurriculoAutomatiza.Domain.Interfaces.Services;
-using CurriculoAutomatiza.Domain.Services;
+﻿using CurriculoAutomatiza.Api.Controllers;
+using CurriculoAutomatiza.Core.Interfaces.Services;
+using CurriculoAutomatiza.Core.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using CurriculoAutomatiza.Infraesctructure.Data;
 
 namespace CurriculoAutomatiza.Api
 {
@@ -13,7 +15,6 @@ namespace CurriculoAutomatiza.Api
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            
         }
 
         public IConfiguration Configuration { get; }
@@ -21,7 +22,13 @@ namespace CurriculoAutomatiza.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<AutomatizaCurriculoDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
             services.AddTransient<IProfissionalService, ProfissionalService>();
+
+            services.AddScoped<ProfissionalController>();
+
             services.AddMvc();
         }
 

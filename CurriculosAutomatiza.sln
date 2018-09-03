@@ -11,11 +11,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infraesctructure", "3 -
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurriculoAutomatiza.Infraesctructure", "src\CurriculoAutomatiza.Infraesctructure\CurriculoAutomatiza.Infraesctructure.csproj", "{D58B2C61-E689-46CE-AFC1-82A6521A09EA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurriculoAutomatiza.Domain", "src\CurriculoAutomatiza.Domain\CurriculoAutomatiza.Domain.csproj", "{9A361740-71B0-472B-B8A8-23D8BC55093D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurriculoAutomatiza.Core", "src\CurriculoAutomatiza.Domain\CurriculoAutomatiza.Core.csproj", "{9A361740-71B0-472B-B8A8-23D8BC55093D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurriculoAutomatiza.UI", "src\CurriculoAutomatiza.UI\CurriculoAutomatiza.UI.csproj", "{C5BBE98C-6275-45CE-88AD-047A766CE6B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurriculoAutomatiza.Api", "src\CurriculoAutomatiza.Api\CurriculoAutomatiza.Api.csproj", "{FE1DFAA3-2DAA-488E-8ED7-40130938BB39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurriculoAutomatiza.Api", "src\CurriculoAutomatiza.Api\CurriculoAutomatiza.Api.csproj", "{FE1DFAA3-2DAA-488E-8ED7-40130938BB39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

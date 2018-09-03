@@ -2,16 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CurriculoAutomatiza.Domain.Entity
+namespace CurriculoAutomatiza.Core.Entity
 {
     public class Profissional
     {
-        public Profissional()
-        {
-
-        }
-
-        public int ProfissionalId { get; set; }
+       public int ProfissionalId { get; set; }
         public string Nome { get; set; }
         public string Cpf { get; set; }
         public string Telefone { get; set; }

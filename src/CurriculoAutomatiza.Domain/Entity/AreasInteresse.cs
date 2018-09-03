@@ -2,14 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CurriculoAutomatiza.Domain.Entity
+namespace CurriculoAutomatiza.Core.Entity
 {
     public class AreasInteresse
     {
-        public AreasInteresse()
-        {
-                
-        }
         public int AreasInteresseId { get; set; }
         public string Nome { get; set; }
         public string Descricao { get; set; }
